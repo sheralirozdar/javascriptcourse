@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+  </head>
+  <body>
+    <h1>Introduction</h1>
+    <form action="">
+      <input type="text" id="stext" onchange="calculate(event)" />
+    </form>
+
+    <script>
+      var number = 12;
+      var char = "d";
+      var names = "My name is Ali";
+      var male = false;
+
+      let student = " Wahab";
+      student = "qaiser";
+
+      const myname = "Rahim";
+      //   myname = "Ali";
+
+      //   number1 + number2;
+
+      //   int number =12;
+      //   char mychar= g;
+      //   String address= "dddndbb nbhgiun 12  2122";
+      //   number1 = number1 + number2;
+      //   x = x << y
+
+      //   calculator
+
+      //   statements
+      //   let day = "clearday";
+
+      //   if (day == "cloudy") {
+      //     console.log("it is raining ");
+      //   } else if (day == "clearday") {
+      //     console.log("it is suuny day ");
+      //   } else {
+      //     console.log("it is boring day ");
+      //   }
+
+      //   var input = document.querySelector("#stext").value;
+
+      let number1 = 12;
+      const number2 = 5;
+      let sum = 0;
+      let sub = 0;
+      let mul = 0;
+      let div = 0;
+      let percent = 0;
+
+      percent = number1 % number2;
+      function calculate(e) {
+        console.log(event.target.value);
+        let operator = document.querySelector("#stext").value; //   + ,- ,*,/
+        console.log(operator);
+        if (operator == "+") {
+          sum = number1 + number2;
+          console.log("The sum is", sum);
+        } else if (operator == "-") {
+          sub = number1 - number2;
+          console.log("The sub is", sub);
+        } else if (operator == "*") {
+          mul = number1 * number2;
+          console.log("The mul is", mul);
+        } else if (operator == "/") {
+          div = number1 / number2;
+          console.log("The division is", div);
+        }
+      }
+      //   var input = document.getElementById("stext").value;
+      var input = document.querySelector("#stext").value;
+      console.log(" s text", input);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form</title>
+  </head>
+  <body>
+    <div id="formContainer"></div>
+
+    <script>
+      // Create form elements
+      var formContainer = document.getElementById("formContainer");
+
+      var input1Label = document.createElement("label");
+      input1Label.textContent = "Input 1:";
+      formContainer.appendChild(input1Label);
+
+      var input1 = document.createElement("input");
+      input1.setAttribute("type", "text");
+      input1.setAttribute("id", "input1");
+      input1.setAttribute("name", "input1");
+      formContainer.appendChild(input1);
+
+      formContainer.appendChild(document.createElement("br"));
+
+      var input2Label = document.createElement("label");
+      input2Label.textContent = "Input 2:";
+      formContainer.appendChild(input2Label);
+
+      var input2 = document.createElement("input");
+      input2.setAttribute("type", "text");
+      input2.setAttribute("id", "input2");
+      input2.setAttribute("name", "input2");
+      formContainer.appendChild(input2);
+
+      formContainer.appendChild(document.createElement("br"));
+      formContainer.appendChild(document.createElement("br"));
+
+      var submitButton = document.createElement("button");
+      submitButton.textContent = "Submit";
+
+      submitButton.addEventListener("click", function () {
+        var inputValue1 = document.getElementById("input1").value;
+        var inputValue2 = document.getElementById("input2").value;
+        console.log("Input 1:", inputValue1);
+        console.log("Input 2:", inputValue2);
+        // Add your submit logic here
+      });
+      formContainer.appendChild(submitButton);
+    </script>
+  </body>
+</html>

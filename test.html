@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .slider {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        background-color: #231c1c;
+        /* margin-top: -22px; */
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        text-decoration: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      img {
+        width: 100%;
+      }
+      .dots {
+        background-color: #e0e0e0;
+        border: 1px solid #413e3e;
+        border-radius: 50%;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+    <div class="slider">
+      <div class="slideshow">
+        <img src="img/banner.jpg" alt="" />
+      </div>
+
+      <a href="" class="prev"> < </a>
+      <a href="" class="next"> > </a>
+    </div>
+    <br />
+    <div style="text-align: center">
+      <div class="dots"></div>
+      <div class="dots"></div>
+      <div class="dots"></div>
+    </div>
+
+    <header></header>
+    <main></main>
+    <section></section>
+    <aside></aside>
+    <nav></nav>
+    <footer></footer>
+  </body>
+</html>

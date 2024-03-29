@@ -1,0 +1,138 @@
+<html>
+  <head></head>
+  <body>
+    <style>
+      .main-menu {
+        list-style: none;
+        height: 49px;
+      }
+      .main-menu > li {
+        float: left;
+        margin-left: 20px;
+        padding: 12px 15px;
+        background-color: #dfcccc;
+        display: block;
+      }
+      .menu {
+        position: relative;
+      }
+      .sub-menu {
+        display: none;
+        position: absolute;
+        list-style: none;
+        background-color: #9fbcca;
+      }
+      .main-menu > li:hover .sub-menu {
+        display: block;
+      }
+      /* input {
+        width: 100%;
+        margin-bottom: 9px;
+        padding: 5px 11px;
+        border-radius: 5px;
+        border: 1px solid #4329296b;
+      } */
+      form {
+        width: 40%;
+        background: #00000047;
+        padding: 17px 24px;
+        border-radius: 5px;
+        /* align-self: center; */
+        /* flex-basis: min-content; */
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .flexbox {
+        display: flex;
+      }
+      .flexbox > div {
+        background-color: #0b9fe9;
+        height: 100px;
+        margin: 10px;
+        width: 50px;
+      }
+      .flexbox div:nth-of-type(1) {
+        flex-grow: 1;
+      }
+      .flexbox div:nth-of-type(2) {
+        flex-grow: 2;
+      }
+      .flexbox div:nth-of-type(3) {
+        flex-shrink: 2;
+      }
+      input[type="text"] {
+        /* width: 100%; */
+        background-color: #0b9fe9;
+        box-sizing: border-box;
+      }
+
+      .beforediv {
+        height: 500px;
+        width: 300px;
+        background-color: #0b9fe9;
+        position: relative;
+      }
+      .beforediv::before {
+        content: "it is before div";
+        height: 400px;
+        width: 200px;
+        background-color: aqua;
+        position: absolute;
+        left: 218px;
+        background-image: url(img/logo.avif);
+      }
+      .beforediv::after {
+        content: "it is after div";
+        height: 400px;
+        width: 200px;
+        background-color: red;
+        position: absolute;
+        background-image: url(img/LM.jpg);
+      }
+      .translate {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid black;
+        transform: translate(50px, 100px);
+        margin-bottom: 500px;
+      }
+    </style>
+
+    <div>
+      <ul class="main-menu">
+        <li>
+          <div class="menu">
+            <a href="#"> Home</a>
+            <ul class="sub-menu">
+              <li>contact</li>
+              <li>Services</li>
+              <li>Map</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>contact</li>
+        <li>Services</li>
+        <li>Map</li>
+      </ul>
+    </div>
+
+    <form>
+      <input type="text" placeholder="Name" value="Sinnan" />
+      <input type="text" placeholder="Father Name" value="Amir" />
+      <input type="email" name="" id="" value="sher@gmail.com" />
+      <input type="date" placeholder="Date Of Birth" value="09/02/2002" />
+      <input type="password" name="" id="" placeholder="enter password" />
+      <input type="submit" name="" id="" />
+    </form>
+    <div class="flexbox">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="beforediv"></div>
+    <div class="translate"></div>
+    <div></div>
+  </body>
+</html>

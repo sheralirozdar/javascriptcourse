@@ -1,0 +1,58 @@
+.append() This method is used to add an element in form of a Node object or a
+DOMString (basically means text). Here's how that would work. // Inserting a
+Node object const parent = document.createElement('div'); const child =
+document.createElement('p'); parent.append(child); // This appends the child
+element to the div element // The div would then look like this
+<div><p></p></div>
+// Inserting a DOMString const parent = document.createElement('div');
+parent.append('Appending Text'); // The div would then look like this
+<div>Appending Text</div>
+.appendChild() Similar to the .append method, this method is used to elements in
+the DOM, but in this case, only accepts a Node object. // Inserting a Node
+object const parent = document.createElement('div'); const child =
+document.createElement('p'); parent.appendChild(child); // This appends the
+child element to the div element // The div would then look like this
+<div><p></p></div>
+// Inserting a DOMString const parent = document.createElement('div');
+parent.appendChild('Appending Text'); // Uncaught TypeError: Failed to execute
+'appendChild' on 'Node': parameter 1 is not of type 'Node' Differences .append
+accepts Node objects and DOMStrings while .appendChild accepts only Node objects
+const parent = document.createElement('div'); const child =
+document.createElement('p'); // Appending Node Objects parent.append(child) //
+Works fine parent.appendChild(child) // Works fine // Appending DOMStrings
+parent.append('Hello world') // Works fine parent.appendChild('Hello world') //
+Throws error .append does not have a return value while .appendChild returns the
+appended Node object const parent = document.createElement('div'); const child =
+document.createElement('p'); const appendValue = parent.append(child);
+console.log(appendValue) // undefined const appendChildValue =
+parent.appendChild(child); console.log(appendChildValue) //
+<p></p>
+<p>
+  .append allows you to add multiple items while appendChild allows only a
+  single item const parent = document.createElement('div'); const child =
+  document.createElement('p'); const childTwo = document.createElement('p');
+  parent.append(child, childTwo, 'Hello world'); // Works fine
+  parent.appendChild(child, childTwo, 'Hello world'); // Works fine, but adds
+  the first element and ignores the rest
+</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Inserting Node object
+      const parent = document.createElement("div");
+      const child = document.createElement("p");
+      parent.append(child); // This appends the child
+      // This appends the child
+      //   element to the div element // The div would then look like this
+      //   <div><p></p></div>      <div>
+      //           <p></p>
+      //   </div>;
+    </script>
+  </body>
+</html>

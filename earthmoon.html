@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moon Orbit Animation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000;
+      }
+
+      .earth {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #3a88e0; /* Earth color */
+      }
+
+      .moon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #e1e1e1; /* Moon color */
+        animation: orbit 5s linear infinite;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      @keyframes orbit {
+        from {
+          transform: translate(-100px) rotate(0deg) translate(200px)
+            rotate(0deg);
+        }
+        to {
+          transform: translate(-100px) rotate(360deg) translate(200px)
+            rotate(-360deg);
+        }
+      }
+
+      .earth:hover .moon {
+        transform: scale(1.2);
+      }
+    </style>
+    <div class="earth">
+      <div class="moon"></div>
+    </div>
+  </body>
+</html>

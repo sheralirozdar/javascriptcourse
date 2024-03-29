@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Form</title>
+  </head>
+  <body>
+    <div id="formContainer"></div>
+
+    <script>
+      // Creating form using string templates
+      const formTemplate = `
+                <form id="myForm">
+                    <label for="input1">Input 1:</label><br>
+                    <input type="text" id="input1" name="input1"><br>
+                    <label for="input2">Input 2:</label><br>
+                    <input type="text" id="input2" name="input2"><br><br>
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+                `;
+
+      // Append form to HTML document
+      document.getElementById("formContainer").innerHTML = formTemplate;
+
+      // Function to handle form submission
+      function submitForm() {
+        var input1Value = document.getElementById("input1").value;
+        var input2Value = document.getElementById("input2").value;
+        console.log("Input 1:", input1Value);
+        console.log("Input 2:", input2Value);
+        // Add your submit logic here
+      }
+    </script>
+  </body>
+</html>

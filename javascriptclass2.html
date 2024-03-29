@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+  </head>
+  <body>
+    <div style="padding: 200px">
+      <form>
+        <input
+          type="text"
+          id="number1"
+          onchange="myfunction(event)"
+          placeholder="Enter First Number"
+        />
+        <input
+          type="text"
+          id="number2"
+          onchange="myfunction(event)"
+          placeholder="Enter second Number"
+        />
+        <input
+          class="sign"
+          onchange="myfunction()"
+          type="text"
+          placeholder="Enter Sign"
+        />
+
+        <p id="output"></p>
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+        </select>
+      </form>
+    </div>
+
+    <script>
+      //   function
+      let myname = "Ali";
+      //   myfunction();
+
+      function myfunction() {
+        console.log("here is it");
+        let number1 = 0;
+        let output = 0;
+        number1 = parseInt(document.querySelector("#number1").value);
+        let number2 = parseInt(document.querySelector("#number2").value);
+        let operator = document.querySelector("#operator").value;
+        // myname = "Rahim";
+        // console.log("this is my function", sign);
+        if (operator == "+") {
+          output = number1 + number2;
+        } else if (operator == "-") {
+          output = number1 - number2;
+        } else if (operator == "*") {
+          output = number1 * number2;
+        } else if (operator == "/") {
+          output = number1 / number2;
+        }
+        document.querySelector("#output").innerHTML = output;
+      }
+
+      function a(b, c) {
+        console.log("any", b + c);
+      }
+
+      document
+        .querySelector("#operator")
+        .addEventListener("click", function () {
+          myfunction();
+        });
+    </script>
+  </body>
+</html>

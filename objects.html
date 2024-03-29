@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      //   let car = "vitz";
+      let car = {
+        color: "red",
+        model: "2024",
+        weight: "100kg",
+        numberplate: 123,
+        start: function () {
+          console.log("the car is starting");
+        },
+      };
+
+      let student = `
+        <ul>
+            <li>${car.color}</li>
+            <li>${car.model}</li>
+            <li>${car.numberplate}</li>
+        </ul>
+    `;
+      document.querySelector(".container").innerHTML = student;
+    </script>
+  </body>
+</html>

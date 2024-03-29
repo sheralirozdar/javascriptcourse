@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Create Html</title>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      let fromcontainer = document.querySelector(".container");
+
+      let form = document.createElement("form");
+
+      fromcontainer.appendChild(form);
+
+      let input = document.createElement("input");
+      input.setAttribute("type", "text");
+      input.setAttribute("id", "name");
+
+      form.appendChild(input);
+      form.appendChild(document.createElement("br"));
+      let input2 = document.createElement("input");
+      input2.setAttribute("type", "text");
+      input2.setAttribute("id", "rollno");
+
+      form.appendChild(input2);
+      form.appendChild(document.createElement("br"));
+
+      let button = document.createElement("button");
+      button.textContent = "submit";
+
+      form.appendChild(button);
+
+      button.addEventListener("click", function () {
+        alert("button clicked");
+      });
+
+      let name = "wahab";
+      let rollno = 12112;
+      let myfrom = ` 
+            <form action="">
+                <input type="text" value=${name} />
+                <input type="text"  value=${rollno} />
+                <input type="text" />
+            </form>          
+      `;
+      let car = {
+        model: 1995,
+        type: "vitz",
+        color: "red",
+        start: function () {
+          console.log("car is going to start");
+        },
+      };
+
+      let cartemplate = `
+         <ul>
+            <li>${car.model}</li>
+            <li>${car.type}</li>
+            <li>${car.color}</li>
+            <li>${car.start()}</li>
+            </ul>
+      `;
+      //   fromcontainer.appendChild("this is append");
+      fromcontainer.innerHTML = cartemplate;
+    </script>
+  </body>
+</html>

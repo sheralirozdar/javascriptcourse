@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      .container {
+        display: grid;
+        grid-auto-rows: minmax(100px, auto);
+        /* background-color: #80799d; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+          "header header header header"
+          "nav main main section"
+          "nav main main section"
+          "aside main main section"
+          "aside main main section"
+          "footer footer footer footer";
+      }
+      header {
+        border: 1px solid #ffff;
+
+        background-color: #1e1d22;
+        grid-area: header;
+      }
+      main {
+        border: 1px solid #ffff;
+
+        background-color: #d253ac;
+        grid-area: main;
+      }
+      aside {
+        border: 1px solid #ffff;
+
+        background-color: #73d253;
+        grid-area: aside;
+      }
+      nav {
+        border: 1px solid #ffff;
+        background-color: #d2537f;
+
+        grid-area: nav;
+      }
+      section {
+        border: 1px solid #ffff;
+
+        background-color: #ccd253;
+        grid-area: section;
+      }
+      footer {
+        border: 1px solid #ffff;
+
+        background-color: #53d2c5;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header></header>
+      <nav></nav>
+      <main></main>
+      <section></section>
+      <aside></aside>
+      <footer></footer>
+    </div>
+  </body>
+</html>

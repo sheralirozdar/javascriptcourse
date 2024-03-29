@@ -1,0 +1,143 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+
+
+    height: 70px;
+    background-color: #dddddd45;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 6px;
+
+}
+.header > img {
+    height: 54px;
+
+}
+.menu > ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu > ul > li > a{
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-left: 13px;
+    color: #565252;    
+}
+.menu > ul > li > a:hover{
+    padding: 11px 13px;
+    background-color: #dddddd96;
+
+}
+.banner{
+  display:flex;
+    height: 500px;
+    background: url(/img/banner.jpg);
+    background-size: cover;
+    /* background: center; */
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+
+}
+.banner-desc{
+    width: 400px;
+    text-align: justify;
+    color: #ffffffeb;
+    background-color: #231e1e54;
+    padding: 21px;
+
+
+}
+.banner-desc > p {
+    font-size: 18px;
+}
+.posts{
+
+    display: flex;
+    /* align-content: flex-start; */
+    flex-direction: column;
+    width: 324px;
+    text-align: center;
+    /* border: 1px solid; */
+    box-shadow: 12px 12px 12px #ddd;
+    padding: 17px;
+    border-radius: 10px;
+    border:  1px solid #5956561f;
+    color: #393737
+}
+.posts:hover{
+    background-color: #101111;
+    color: #fff;
+}
+.post{
+    
+    display: flex;
+    justify-content: space-around;
+    background-color: #c2b3b314;
+    padding: 65px 0px
+}
+.posts > img {
+    width: 100%;
+    height: 100%;;
+    max-height: 166px;
+}
+
+.posts > p{
+    font-size: 18px;
+    
+}
+.posts > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #1470b2;
+}
+.footer-banner{
+    display: flex;
+    padding: 83px 32px;
+    align-items: center;
+    background-color: #2a292b9e;
+}
+.footer-banner-img{
+    /* height: 400px; */
+    max-width: 516px;
+}
+.footer-banner-img > img{
+    width: 100%;
+}
+.footer-banner-desc >  p{
+    font-size: 23px;
+}
+.f{
+    display: flex;
+    align-items: center;
+    background-color: #ddd;
+}
+.footer{
+    display: flex;
+    height: 100px;
+    background-color: #170202;
+    color: #fff;
+    align-items: center;
+}
+.footer > div  > ul {
+    list-style: none;
+    /* display: flex; */
+    font-size: 17px;
+    /* padding: 12px 0px; */
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
+}
+.footer > div  > ul > li{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
