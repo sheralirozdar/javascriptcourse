@@ -7,21 +7,46 @@
   </head>
   <body>
     <div id="formContainer"></div>
+    <div class="office"></div>
 
     <script>
       // Creating form using string templates
+
+      let Office = {
+        location: "near kiu",
+        person: 10,
+        workinghour: new Date(),
+        typeofwork: function () {
+          console.log("digital media marketing");
+        },
+      };
+
+      const label = " Input 1";
+      const input1 = "input1";
+      const input2 = "input2";
+      const submitname = "Submit";
       const formTemplate = `
                 <form id="myForm">
-                    <label for="input1">Input 1:</label><br>
-                    <input type="text" id="input1" name="input1"><br>
+                    <label for="input1">${label}</label><br>
+                    <input type="text" id="input1" name="input1" placeholder=${input1}><br>
                     <label for="input2">Input 2:</label><br>
-                    <input type="text" id="input2" name="input2"><br><br>
-                    <button type="button" onclick="submitForm()">Submit</button>
+                    <input type="text" id="input2" name="input2" placeholder=${input2}><br><br>
+                    <button type="button" onclick="submitForm()">${submitname}</button>
                 </form>
                 `;
 
+      const officelist = `
+                                <ul>
+                                  <li>${Office.location}</li>
+                                  <li>${Office.person}</li>
+                                  <li>${Office.typeofwork()}</li>
+                                  <li>${Office.workinghour}</li>
+                                  
+                                 </ul>
+                                 `;
       // Append form to HTML document
       document.getElementById("formContainer").innerHTML = formTemplate;
+      document.querySelector(".office").innerHTML = officelist;
 
       // Function to handle form submission
       function submitForm() {
